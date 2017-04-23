@@ -1,0 +1,5 @@
+node_modules
+wp-admin
+wp-includes
+.DS_Store
+.htaccess
