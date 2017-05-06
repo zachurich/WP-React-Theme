@@ -1,0 +1,91 @@
+.wrapper {
+    display: flex;
+    padding-top: 50px;
+    min-height: 98vh;
+    width: 100%;
+}
+
+.content-centered {
+    padding-top: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding: 0 20px;
+    max-width: 52.7em;
+    margin: 0 auto;
+    @media screen and (min-width: $desktop-min ) {
+        min-width: 52.7em;
+    }
+}
+
+.background-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    .circle {
+        border-radius: 50%;
+        position: absolute;
+        transition: 1.2s cubic-bezier(0.95,-0.24, 0.38, 1.29);
+        &--blue {
+            width: 500px;
+            height: 500px;
+            background: $blue;
+        }
+        &--yellow {
+            width: 500px;
+            height: 500px;
+            background: $yellow;
+        }
+        &--red {
+            width: 500px;
+            height: 500px;
+            background: $red;
+        }
+    }
+}
+
+.home {
+    &--links {
+        margin-top: 20px;
+        a {
+            margin-right: 20px; 
+        }
+    }
+}
+
+$colors: $yellow $red $blue;
+@each $color in $colors{
+    $i: index($colors, $color);
+    .blog--links-#{$i} { 
+        a {
+            color: $color;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: white;
+    width: 100%;
+    z-index: 99;
+    ul {
+        li {
+            display: inline-block;
+            margin-right: 10%;
+            a {
+                margin: 20px 0 20px 0;
+                color: $blue;
+            }
+        }
+    }
+}

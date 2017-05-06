@@ -1,0 +1,41 @@
+body {
+    font-size: $regular-size--size;
+    font-family: $base-font--family;
+    color: white;
+    background: $black;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+a {
+    font-family: $link-font--family;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.8em;
+}
+
+h1,
+h2 {
+    margin: 0;
+    a {
+        font-size: inherit;
+        font-family: $base-font--family;
+        text-transform: none;
+    }
+}
+
+h1 {
+    font-size: 3.4em;
+}
+
+h2 {
+    font-size: 2.14em;
+    font-weight: 600;
+}
+
+li {
+    list-style-type: none;
+}

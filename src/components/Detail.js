@@ -1,18 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Link } from 'react-router-dom';
+import BackLink from './BackLink';
+import Toggle from './Toggle';
 
 class Detail extends React.Component {
     render() {
         const post = this.props.info;
-        console.log(post);
         return (
-            <div>
-                <h2>  
-                    { post.title.rendered }
-                </h2>
-                <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+            <div className="page wrapper">
+                <Toggle 
+                    toggle={ this.props.toggle }
+                    handleNav={ this.props.handleNav }
+                />
+                <div className="container">
+                    <BackLink path="/blog"/>
+                    <h2>  
+                        { post.title.rendered }
+                    </h2>
+                    <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+                </div>
             </div>
         )
     }

@@ -1,0 +1,44 @@
+.nav--slide-in {
+    animation: slideIn 0.2s ease-in-out forwards;
+}
+
+.nav--slide-out {
+    animation: slideOut 0.2s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(47px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(47px);
+    }
+}
+
+.content--fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

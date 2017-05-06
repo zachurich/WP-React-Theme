@@ -1,8 +1,11 @@
+build
 node_modules
 wp-admin
 wp-includes
 .DS_Store
 .htaccess
+maps
+*.map
 wp-activate.php
 wp-blog-header.php
 wp-config.php

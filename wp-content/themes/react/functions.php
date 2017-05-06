@@ -95,6 +95,9 @@ add_action( 'widgets_init', 'react_widgets_init' );
  * Enqueue scripts and styles.
  */
 function react_scripts() {
+	// Enqueue external Google Fonts.
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Montserrat:600,700|Roboto+Slab:400,700', array(), null, 'screen' );
+
 	wp_enqueue_style( 'react-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'react-app', get_template_directory_uri() . '/bundle.js', array(), '20151215', true );
